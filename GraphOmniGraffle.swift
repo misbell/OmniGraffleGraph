@@ -9,19 +9,19 @@
 import Foundation
 
 
-func buildGraphForCanvas(canvas: OmniGraffle6Canvas) -> Graph {
+func buildGraphForCanvas(canvas: OmniGraffleCanvas) -> Graph {
     let graph = Graph()
     
     for shape_ in canvas.shapes!() {
-        let shape = shape_ as! OmniGraffle6Shape
+        let shape = shape_ as! OmniGraffleShape
         graph.addNode(node: Node(identifier: shape.id!))
     }
     
     for line_ in canvas.lines!() {
-        let line = line_ as! OmniGraffle6Line
+        let line = line_ as! OmniGraffleLine
         
-        let sourceIdentifier = (line.source! as! OmniGraffle6Shape).id!
-        let destinationIdentifier = (line.destination! as! OmniGraffle6Shape).id!
+        let sourceIdentifier = (line.source! as! OmniGraffleShape).id!
+        let destinationIdentifier = (line.destination! as! OmniGraffleShape).id!
         
         let sourceNode = graph.nodeByIdentifier(identifier: sourceIdentifier)!
         let destinationNode = graph.nodeByIdentifier(identifier: destinationIdentifier)!
@@ -32,11 +32,11 @@ func buildGraphForCanvas(canvas: OmniGraffle6Canvas) -> Graph {
     return graph
 }
 
-func mapIDsToShapes(canvas: OmniGraffle6Canvas) -> [Int: OmniGraffle6Shape] {
-    var map = [Int: OmniGraffle6Shape]()
+func mapIDsToShapes(canvas: OmniGraffleCanvas) -> [Int: OmniGraffleShape] {
+    var map = [Int: OmniGraffleShape]()
     
     for shape in canvas.shapes!() {
-        map[(shape as AnyObject).id!] = shape as? OmniGraffle6Shape
+        map[(shape as AnyObject).id!] = shape as? OmniGraffleShape
     }
     
     return map

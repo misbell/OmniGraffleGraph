@@ -14,14 +14,14 @@ import ScriptingBridge
 
 @objc protocol SBApplicationProtocol: SBObjectProtocol {}
 
-@objc protocol OmniGraffle6Item: SBObjectProtocol {}
+@objc protocol OmniGraffleItem: SBObjectProtocol {}
 
 
-@objc protocol OmniGraffle6Graphic: OmniGraffle6Item {
+@objc protocol OmniGraffleGraphic: OmniGraffleItem {
     @objc optional var id: Int { get }
 }
 
-@objc protocol OmniGraffle6Text: OmniGraffle6Item {
+@objc protocol OmniGraffleText: OmniGraffleItem {
     @objc optional var id: Int { get }
     
 
@@ -29,42 +29,42 @@ import ScriptingBridge
 
 
 
-@objc protocol OmniGraffle6Solid: OmniGraffle6Graphic {
+@objc protocol OmniGraffleSolid: OmniGraffleGraphic {
    // @objc optional func setFillColor(color: NSColor)
     @objc optional var fillColor: NSColor { get set }
             @objc optional var text: String { get set }
 
 }
 
-@objc protocol OmniGraffle6Shape: OmniGraffle6Solid {}
+@objc protocol OmniGraffleShape: OmniGraffleSolid {}
 
-@objc protocol OmniGraffle6Line: OmniGraffle6Graphic {
-    @objc optional var source: OmniGraffle6Graphic { get set }
-    @objc optional var destination: OmniGraffle6Graphic { get set }
+@objc protocol OmniGraffleLine: OmniGraffleGraphic {
+    @objc optional var source: OmniGraffleGraphic { get set }
+    @objc optional var destination: OmniGraffleGraphic { get set }
 }
 
-@objc protocol OmniGraffle6Canvas: SBObjectProtocol {
+@objc protocol OmniGraffleCanvas: SBObjectProtocol {
     @objc optional var name: String { get set }
     @objc optional func shapes() -> SBElementArray
     @objc optional func lines() -> SBElementArray
 }
 
-@objc protocol OmniGraffle6Document: SBObjectProtocol {
+@objc protocol OmniGraffleDocument: SBObjectProtocol {
     @objc optional func canvases() -> SBElementArray
 }
 
-@objc protocol OmniGraffle6Application: SBObjectProtocol {
+@objc protocol OmniGraffleApplication: SBObjectProtocol {
     @objc optional func documents() -> SBElementArray
 }
 
-extension SBObject: OmniGraffle6Text {}
-extension SBObject: OmniGraffle6Item {}
-extension SBObject: OmniGraffle6Graphic {}
-extension SBObject: OmniGraffle6Solid {}
-extension SBObject: OmniGraffle6Shape {}
-extension SBObject: OmniGraffle6Line {}
-extension SBObject: OmniGraffle6Canvas {}
-extension SBObject: OmniGraffle6Document {}
-extension SBApplication: OmniGraffle6Application {}
+extension SBObject: OmniGraffleText {}
+extension SBObject: OmniGraffleItem {}
+extension SBObject: OmniGraffleGraphic {}
+extension SBObject: OmniGraffleSolid {}
+extension SBObject: OmniGraffleShape {}
+extension SBObject: OmniGraffleLine {}
+extension SBObject: OmniGraffleCanvas {}
+extension SBObject: OmniGraffleDocument {}
+extension SBApplication: OmniGraffleApplication {}
 
 

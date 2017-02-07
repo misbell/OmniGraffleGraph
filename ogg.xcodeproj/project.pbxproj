@@ -33,6 +33,7 @@
 		1BB1D6061E465D8B007B62DB /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		1BB1D6081E465D94007B62DB /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		1BB1D60A1E465E49007B62DB /* GraphOmniGraffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphOmniGraffle.swift; path = ../GraphOmniGraffle.swift; sourceTree = "<group>"; };
+		1BECE6031E49622100D56DF6 /* OmniGraffle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OmniGraffle.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +70,7 @@
 				1BB1D6051E465D7A007B62DB /* GraphLibrary */,
 				1B7F055E1E4658F700A577E7 /* main.swift */,
 				1B7F05651E46595D00A577E7 /* OmniGraffleScripting.swift */,
+				1BECE6031E49622100D56DF6 /* OmniGraffle.h */,
 			);
 			path = ogg;
 			sourceTree = "<group>";
