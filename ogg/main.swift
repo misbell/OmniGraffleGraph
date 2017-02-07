@@ -29,8 +29,11 @@ for SCC in SCCs {
     let color = colors[colorIndex]
     
     for node in SCC {
+        
+        // I separated this into two lines..
         var x: OmniGraffle6Solid = IDsToShapes[node.identifier]!
-        //x.setFillColor!(color: NSColor.yellow)
+       // x.setFillColor!(color: NSColor.yellow) // doesn't compile
+        x.fillColor = NSColor.yellow // x is immutable, can't assign
         
         // text also is giving me issues. 
         //print (x.text)
