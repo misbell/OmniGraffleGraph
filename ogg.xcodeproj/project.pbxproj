@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1B7F055F1E4658F700A577E7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7F055E1E4658F700A577E7 /* main.swift */; };
+		1B7F05661E46595D00A577E7 /* OmniGraffleScripting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7F05651E46595D00A577E7 /* OmniGraffleScripting.swift */; };
+		1BB1D6071E465D8B007B62DB /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB1D6061E465D8B007B62DB /* Graph.swift */; };
+		1BB1D6091E465D94007B62DB /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB1D6081E465D94007B62DB /* Node.swift */; };
+		1BB1D60B1E465E49007B62DB /* GraphOmniGraffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB1D60A1E465E49007B62DB /* GraphOmniGraffle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,10 @@
 /* Begin PBXFileReference section */
 		1B7F055B1E4658F700A577E7 /* ogg */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ogg; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B7F055E1E4658F700A577E7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		1B7F05651E46595D00A577E7 /* OmniGraffleScripting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmniGraffleScripting.swift; sourceTree = "<group>"; };
+		1BB1D6061E465D8B007B62DB /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		1BB1D6081E465D94007B62DB /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		1BB1D60A1E465E49007B62DB /* GraphOmniGraffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphOmniGraffle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +49,7 @@
 		1B7F05521E4658F600A577E7 = {
 			isa = PBXGroup;
 			children = (
+				1BB1D60A1E465E49007B62DB /* GraphOmniGraffle.swift */,
 				1B7F055D1E4658F700A577E7 /* ogg */,
 				1B7F055C1E4658F700A577E7 /* Products */,
 			);
@@ -57,9 +66,20 @@
 		1B7F055D1E4658F700A577E7 /* ogg */ = {
 			isa = PBXGroup;
 			children = (
+				1BB1D6051E465D7A007B62DB /* GraphLibrary */,
 				1B7F055E1E4658F700A577E7 /* main.swift */,
+				1B7F05651E46595D00A577E7 /* OmniGraffleScripting.swift */,
 			);
 			path = ogg;
+			sourceTree = "<group>";
+		};
+		1BB1D6051E465D7A007B62DB /* GraphLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				1BB1D6061E465D8B007B62DB /* Graph.swift */,
+				1BB1D6081E465D94007B62DB /* Node.swift */,
+			);
+			name = GraphLibrary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,7 +141,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BB1D6071E465D8B007B62DB /* Graph.swift in Sources */,
+				1B7F05661E46595D00A577E7 /* OmniGraffleScripting.swift in Sources */,
 				1B7F055F1E4658F700A577E7 /* main.swift in Sources */,
+				1BB1D6091E465D94007B62DB /* Node.swift in Sources */,
+				1BB1D60B1E465E49007B62DB /* GraphOmniGraffle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +277,7 @@
 				1B7F05641E4658F700A577E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
