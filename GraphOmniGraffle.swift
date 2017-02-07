@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 func buildGraphForCanvas(canvas: OmniGraffle6Canvas) -> Graph {
     let graph = Graph()
     

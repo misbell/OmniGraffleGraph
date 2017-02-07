@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 class Node: Hashable {
     private(set) var identifier: Int
     private(set) var neighbors = [Node]()

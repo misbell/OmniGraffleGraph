@@ -6,6 +6,7 @@
 //  Copyright © 2017 michael prenez-isbell. All rights reserved.
 //
 
+
 import Cocoa
 import ScriptingBridge
 
@@ -65,4 +66,5 @@ extension SBObject: OmniGraffle6Line {}
 extension SBObject: OmniGraffle6Canvas {}
 extension SBObject: OmniGraffle6Document {}
 extension SBApplication: OmniGraffle6Application {}
+
 

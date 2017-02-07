@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 class Graph {
     private(set) var nodes = [Node]()
     private var identifiersToNodes = [Int: Node]()
